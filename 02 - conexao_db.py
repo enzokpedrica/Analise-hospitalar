@@ -9,6 +9,26 @@ colunas_patients = [
     'street', 'age'
 ]
 
+colunas_medicos = [
+    'doctor_id', 'first_name', 'last_name', 'specialization',
+    'phone_number', 'years_experience', 'hospital_branch', 'email'
+]
+
+colunas_consultas = [
+    'appointment_id', 'patient_id', 'doctor_id', 'appointment_date',
+    'appointment_time', 'reason_for_visit', 'status'
+]
+
+colunas_tratamentos = [
+    'treatment_id', 'appointment_id', 'treatment_type', 'description',
+    'cost', 'treatment_date'
+]
+
+colunas_faturamento = [
+    'bill_id', 'patient_id', 'treatment_id', 'bill_date', 'amount',
+    'payment_method', 'payment_status'
+]
+
 
 conn = pyodbc.connect(
     'DRIVER={ODBC Driver 17 for SQL Server};'
@@ -42,8 +62,17 @@ def carregar_csv_para_sql(nome_arquivo, nome_tabela, colunas_ordenadas):
 
 
 # Caminhos dos arquivos
-caminho = "C:\\git\\analise-hospitalar\\Silver\\patients_silver.csv"
-carregar_csv_para_sql(caminho, 'patients', colunas_patients)
+caminho_patients = "C:\\git\\analise-hospitalar\\Silver\\patients_silver.csv"
+caminho_medicos = 'C:\\git\\analise-hospitalar\\Silver\\doctors_silver.csv'
+caminho_consultas = 'C:\\git\\analise-hospitalar\\Silver\\appointments_silver.csv'
+caminho_tratamentos = 'C:\\git\\analise-hospitalar\\Silver\\treatments_silver.csv'
+caminho_faturamento = 'C:\\git\\analise-hospitalar\\Silver\\billing_silver.csv'
+
+carregar_csv_para_sql(caminho_patients, 'patients', colunas_patients)
+carregar_csv_para_sql(caminho_medicos, '', colunas_medicos)
+carregar_csv_para_sql(caminho_consultas, '', colunas_consultas)
+carregar_csv_para_sql(caminho_tratamentos, '', colunas_tratamentos)
+carregar_csv_para_sql(caminho_faturamento, '', colunas_faturamento)
 
 cursor.close()
 conn.close()
