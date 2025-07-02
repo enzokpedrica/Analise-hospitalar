@@ -68,11 +68,11 @@ caminho_consultas = 'C:\\git\\analise-hospitalar\\Silver\\appointments_silver.cs
 caminho_tratamentos = 'C:\\git\\analise-hospitalar\\Silver\\treatments_silver.csv'
 caminho_faturamento = 'C:\\git\\analise-hospitalar\\Silver\\billing_silver.csv'
 
-carregar_csv_para_sql(caminho_patients, 'patients', colunas_patients)
-carregar_csv_para_sql(caminho_medicos, '', colunas_medicos)
-carregar_csv_para_sql(caminho_consultas, '', colunas_consultas)
-carregar_csv_para_sql(caminho_tratamentos, '', colunas_tratamentos)
-carregar_csv_para_sql(caminho_faturamento, '', colunas_faturamento)
+# carregar_csv_para_sql(caminho_patients, 'patients', colunas_patients)
+# carregar_csv_para_sql(caminho_medicos, 'doctors', colunas_medicos)
+# carregar_csv_para_sql(caminho_consultas, 'appointments', colunas_consultas)
+# carregar_csv_para_sql(caminho_tratamentos, 'treatments', colunas_tratamentos)
+carregar_csv_para_sql(caminho_faturamento, 'billing', colunas_faturamento)
 
 cursor.close()
 conn.close()
