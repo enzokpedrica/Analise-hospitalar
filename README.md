@@ -29,7 +29,7 @@ Esses arquivos foram tratados, relacionados e inseridos no SQL Server. Views oti
 
 - Após o dowload dos nossos datasets, precisamos entender nossas estruturas de dados, onde vamos criar relacionamentos, realizar Joins e seguir para a análise
 ### Visão Geral
-![Dashboard Geral](Imagens/modelagem_banco.png)
+![Dashboard Geral](Imagens/modelagem_banco.PNG)
 
 ## 💼 Perguntas de Negócio Respondidas
 
