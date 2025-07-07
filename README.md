@@ -27,7 +27,7 @@ Esses arquivos foram tratados, relacionados e inseridos no SQL Server. Views oti
 
 ## 🌱 Passo a Passo do Projeto
 
-- Após o dowload dos nossos datasets, precisamos entender nossas estruturas de dados, onde vamos criar relacionamentos, realizar Joins e seguir para a análise
+#### Após o dowload dos nossos datasets, precisamos entender nossas estruturas de dados, onde vamos criar relacionamentos, realizar Joins e seguir para a análise
 
 ### Modelagem de Dados
 - Esse passo da modelagem é primordial para você entender os meus dados e criar suas tabelas de relacionamento. Site utilizado: **dbdigram.io**
