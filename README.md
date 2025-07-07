@@ -1,6 +1,6 @@
 # 🏥 Inovamed - Healthcare Analytics
 ---
-## ▪ Sobre o Projeto
+## 🔹 Sobre o Projeto
 
 Este projeto tem como objetivo demonstrar habilidades práticas em **Engenharia de Dados** e **Análise de Dados** por meio do **processamento, modelagem e visualização** de informações provenientes de cinco planilhas distintas relacionadas a um hospital fictício, o **Inovamed**.
 
@@ -11,7 +11,7 @@ Com isso, buscamos transformar **dados brutos** em **informações estratégicas
 ## 📊 Tecnologias Utilizadas
 
 - Python (ETL e pré-processamento)
-- Pandas
+- Pandas (Transformação e exportação)
 - SQL Server (modelagem relacional + criação de views)
 - Power BI (dashboards interativos)
 - Git/GitHub (versionamento e portfólio)
@@ -20,7 +20,7 @@ Com isso, buscamos transformar **dados brutos** em **informações estratégicas
 
 ## 🧩 Estrutura dos Dados
 
-O projeto trabalha com 5 datasets principais que foram baixados do KAGLE, são estes:
+O projeto trabalha com 5 datasets principais que foram baixados do KAGGLE, são estes:
 
 - **patients.csv** – Dados demográficos e de cadastro de pacientes
 - **doctors.csv** – Especialidades e experiência médica
@@ -37,30 +37,30 @@ Esses arquivos foram tratados, relacionados e inseridos no SQL Server. Views oti
 #### Após o dowload dos datasets, é o momento de entender nossas estruturas de dados, onde vamos modelar e planejar os relacionamentos que as tabelas irão possuir
 
 ### 🔹 Modelagem de Dados
-- Esse passo da modelagem é primordial para você entender os meus dados e criar suas tabelas de relacionamento. Site utilizado: **dbdigram.io**
+- Esse passo da modelagem é primordial para entender os dados e criar as possíveis tabelas de relacionamento que serão criadas no decorrer do projeto.
+- Site utilizado: **dbdigram.io**
 ![Modelagem Banco](Imagens/modelagem_banco.PNG)
 
 ### 🔹 Processo de ETL
-- Após eu ter o mapeamento dos meus dados chegou a hora de executar o processo de ETL
-- Eu optei por usar a **Arquitetura Medallion**
-- O ponto inicial foi deixar os datasets na camada BRONZE
-- Logo em seguida foi executado uma pipeline de dados onde aplicava o processo de **TRANSFORMAÇÃO** dos dados
-  - O arquivo da transformação .ipynb se encontra no repositório, mas em resumo foram alterados: Tipo de dados, criação de novas colunas com extração de valores
-  - Após a transformação os datasets já foram salvos na camada PRATA
-- Com os dados na camada PRATA, chegou o momento de fazer o **LOAD** para nosso banco de dados
+- Após o mapeamento dos dados chegou a hora de executar o processo de ETL.
+- Foi optado por usar a **Arquitetura Medallion**, a camada Bronze é o início dos dados, camada Prata para dados limpos e a camada Gold a conexão do SQL Server com as VIEWs.
+- O ponto inicial foi deixar os datasets na camada BRONZE para assim começar as modificações
+- Logo em seguida foi executado uma pipeline de dados onde aplicava o processo de **TRANSFORMAÇÃO** dos dados.
+  - O arquivo da transformação .ipynb se encontra no repositório, mas em resumo foram alterados: Tipo de dados, criação de novas colunas com extração de valores.
+  - Após a transformação os datasets foram salvos na camada PRATA.
+- Com os dados na camada PRATA, chegou o momento de fazer o **LOAD** para nosso banco de dados no SQL Server.
 
 ### 🔹 Load para o Banco de Dados (SQL Server)
-- No SQL Server foi executado Queries para a criação do database que ficariam armazenados as tabelas
-- Com os nossos dados mapeados e modelados foi executado Queries para a criação das tabelas
+- No SQL Server foi criado o Database, logo em seguida foi criado as tabelas por meio de Queries (imagem abaixo)
 - Após a criação das tabelas precisamos realizar a conexão Python -> SQL Server
   - Com conexão bem sucessida foi hora de executar nossa função e realizar o LOAD para nosso banco de dados
 ![Queries](Imagens/Querydecriacaotabelas.PNG)
 
 ### 🔹 Dados no SQL Server
-- Com os dados inseridos no nosso banco de dados, chegou a hora de criarmos views para facilitar nossa análise no PowerBI
-- Views criadas, agora partiu PowerBI
+- Com os dados inseridos no banco de dados, chegou a hora de criarmos views para facilitar nossa análise no Power BI
+- Views criadas, agora partiu Power BI
 
-### 🔹 Conexão PowerBI
+### 🔹 Conexão Power BI
 - Realizado a conexão entre PowerBI -> SQL Server
 - Carregamento das views, o carregamento foi direto porque os dados já se encontravam "LIMPOS e FORMATADOS"
 
