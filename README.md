@@ -1,5 +1,12 @@
 # 🏥 Inovamed - Healthcare Analytics
 ---
+## ▪ Sobre o Projeto
+
+Este projeto tem como objetivo demonstrar habilidades práticas em **Engenharia de Dados** e **Análise de Dados** por meio do **processamento, modelagem e visualização** de informações provenientes de cinco planilhas distintas relacionadas a um hospital fictício, o **Inovamed**.
+
+A proposta consiste em aplicar técnicas de **ETL (Extração, Transformação e Carga)**, criação de um **modelo relacional em SQL Server**, e construção de **dashboards analíticos no Power BI** que respondam a perguntas de negócio relevantes para a gestão hospitalar.
+
+Com isso, buscamos transformar **dados brutos** em **informações estratégicas confiáveis**, que auxiliem na **tomada de decisão orientada por dados**.
 
 ## 📊 Tecnologias Utilizadas
 
@@ -27,13 +34,13 @@ Esses arquivos foram tratados, relacionados e inseridos no SQL Server. Views oti
 
 ## 🌱 Passo a Passo do Projeto
 
-#### Após o dowload dos nossos datasets, precisamos entender nossas estruturas de dados, onde vamos criar relacionamentos, realizar Joins e seguir para a análise
+#### Após o dowload dos datasets, é o momento de entender nossas estruturas de dados, onde vamos modelar e planejar os relacionamentos que as tabelas irão possuir
 
-### Modelagem de Dados
+### 🔹 Modelagem de Dados
 - Esse passo da modelagem é primordial para você entender os meus dados e criar suas tabelas de relacionamento. Site utilizado: **dbdigram.io**
 ![Modelagem Banco](Imagens/modelagem_banco.PNG)
 
-### Processo de ETL
+### 🔹 Processo de ETL
 - Após eu ter o mapeamento dos meus dados chegou a hora de executar o processo de ETL
 - Eu optei por usar a **Arquitetura Medallion**
 - O ponto inicial foi deixar os datasets na camada BRONZE
@@ -42,22 +49,22 @@ Esses arquivos foram tratados, relacionados e inseridos no SQL Server. Views oti
   - Após a transformação os datasets já foram salvos na camada PRATA
 - Com os dados na camada PRATA, chegou o momento de fazer o **LOAD** para nosso banco de dados
 
-### Load para o Banco de Dados (SQL Server)
+### 🔹 Load para o Banco de Dados (SQL Server)
 - No SQL Server foi executado Queries para a criação do database que ficariam armazenados as tabelas
 - Com os nossos dados mapeados e modelados foi executado Queries para a criação das tabelas
 - Após a criação das tabelas precisamos realizar a conexão Python -> SQL Server
   - Com conexão bem sucessida foi hora de executar nossa função e realizar o LOAD para nosso banco de dados
 ![Queries](Imagens/Querydecriacaotabelas.PNG)
 
-### Dados no SQL Server
+### 🔹 Dados no SQL Server
 - Com os dados inseridos no nosso banco de dados, chegou a hora de criarmos views para facilitar nossa análise no PowerBI
 - Views criadas, agora partiu PowerBI
 
-### Conexão PowerBI
+### 🔹 Conexão PowerBI
 - Realizado a conexão entre PowerBI -> SQL Server
 - Carregamento das views, o carregamento foi direto porque os dados já se encontravam "LIMPOS e FORMATADOS"
 
- ### Criação de Dashboard para Visualização com PowerBI
+ ### 🔹 Criação de Dashboard para Visualização com PowerBI
 - O Dashboard foi divido em 3 páginas onde abordamos: Visão Geral, Financeiro e Atendimentos
 - 📄 Veja o dashboard completo em PDF:
 ![Dashboard Geral](Imagens/dash_hospital.pdf)
