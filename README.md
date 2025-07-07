@@ -95,6 +95,7 @@ O painel do Power BI foi desenvolvido para responder a perguntas estratégicas p
  
 ✅ **Com os pacientes que não aparecem, quais os motivos?**  
 💬 Apesar da ausência de uma coluna direta com o motivo, a estratégia adotado poderia ser envolver o setor de SAC, com isso criar uma nova tabela de dados onde estariam esses dados.
+
 📌 *Sugestão futura*: apoiar o setor de SAC com pesquisas de satisfação para investigar possíveis objeções — como dúvidas sobre o tratamento, percepção de preço ou insegurança.
 
 ---
