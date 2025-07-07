@@ -31,7 +31,7 @@ Esses arquivos foram tratados, relacionados e inseridos no SQL Server. Views oti
 
 ### Modelagem de Dados
 - Esse passo da modelagem é primordial para você entender os meus dados e criar suas tabelas de relacionamento. Site utilizado: **dbdigram.io**
-![Dashboard Geral](Imagens/modelagem_banco.PNG)
+![Modelagem Banco](Imagens/modelagem_banco.PNG)
 
 ### Processo de ETL
 - Após eu ter o mapeamento dos meus dados chegou a hora de executar o processo de ETL
@@ -47,7 +47,7 @@ Esses arquivos foram tratados, relacionados e inseridos no SQL Server. Views oti
 - Com os nossos dados mapeados e modelados foi executado Queries para a criação das tabelas
 - Após a criação das tabelas precisamos realizar a conexão Python -> SQL Server
   - Com conexão bem sucessida foi hora de executar nossa função e realizar o LOAD para nosso banco de dados
-![Dashboard Geral](Imagens/Querydecriacaotabelas.PNG)
+![Queries](Imagens/Querydecriacaotabelas.PNG)
 
 ### Dados no SQL Server
 - Com os dados inseridos no nosso banco de dados, chegou a hora de criarmos views para facilitar nossa análise no PowerBI
@@ -59,63 +59,36 @@ Esses arquivos foram tratados, relacionados e inseridos no SQL Server. Views oti
 
  ### Criação de Dashboard para Visualização com PowerBI
 - O Dashboard foi divido em 3 páginas onde abordamos: Visão Geral, Financeiro e Atendimentos
+- 📄 Veja o dashboard completo em PDF:
 ![Dashboard Geral](Imagens/dash_hospital.pdf)
+
+---
 
 ## 💼 Perguntas de Negócio Respondidas
 
 O painel do Power BI foi desenvolvido para responder a perguntas estratégicas para a gestão da Inovamed, como:
 
 ✅ **Qual mês que mais faturou?**  
-↳ Excelente para análise de sazonalidade e metas mensais.
+↳ O mês com o maior faturamento foi Abril com R$ 64.271,54.
 
 ✅ **Qual o tipo de tratamento que mais gera receita?**  
-↳ Ajuda na definição de foco comercial e estratégico.
+↳ O tipo de tratamento que mais gera receita é do tipo: Chemoterapy (Quimioterapia), representando 23,38%.
 
 ✅ **Quais médicos geram mais receitas?**  
-↳ Métrica ótima para gestão de desempenho individual.
+↳ Os 3 médicos mais "valiosos" são: Dra Sarah Taylor, Dr Alex Davies, Dr David Taylor.
 
 ✅ **Quem são os pacientes que mais geram receitas?**  
-↳ Base perfeita para estratégias de retenção e relacionamento VIP.
+↳ Os 3 pacientes que mais geram receitas são: Michael Taylor, Michael Wilson e Laura Davis.
 
 ✅ **Qual plano de saúde gera maior receita?**  
-↳ Ajuda na negociação com operadoras e análise de lucratividade.
+↳ O plano que representa a maior porcentagem de receita gerada é o HealIndia com 33,34%.
 
 ✅ **Qual a faixa etária dos meus pacientes?**  
-↳ Gera insights sobre o público-alvo, possibilitando campanhas personalizadas.
-
-🔹 **Com os pacientes que não aparecem, quais os motivos?**  
-💬 Apesar da ausência de uma coluna direta com o motivo, a análise de faltas foi feita com base em dados indiretos. As perguntas exploradas foram:
-
-- Qual a **taxa de não comparecimento** por perfil de paciente (plano, idade, tratamento)?
-- Em quais **dias da semana/horários** as faltas são mais comuns?
-
+↳ A média da faixa etária esta em 45 anos.
+ 
+✅ **Com os pacientes que não aparecem, quais os motivos?**  
+💬 Apesar da ausência de uma coluna direta com o motivo, a estratégia adotado poderia ser envolver o setor de SAC, com isso criar uma nova tabela de dados onde estariam esses dados.
 📌 *Sugestão futura*: apoiar o setor de SAC com pesquisas de satisfação para investigar possíveis objeções — como dúvidas sobre o tratamento, percepção de preço ou insegurança.
-
----
-
-## 🧠 Insights Estratégicos
-
-- Pacientes com plano de saúde privado geram maior faturamento médio.
-- O tratamento **X-Ray** representa a maior fatia da receita total.
-- O médico Dr. João Silva realiza o maior número de atendimentos, mas o Dr. Pedro Rocha tem o **maior ticket médio** por paciente.
-- As faltas ocorrem com mais frequência nas segundas-feiras e no período da manhã.
-
----
-
-## 📌 Possibilidades Futuras
-
-- Implantar modelo preditivo para prever faltas.
-- Integrar com ferramentas de envio de lembretes para reduzir ausências.
-- Criar APIs para alimentar o Power BI com dados em tempo real.
-
----
-
-## 🧑‍💼 Autor
-
-**Enzo Koyano Pedriça**  
-💼 Assistente de P&D na Indústria Linea Brasil  
-🚀 Em transição para Engenharia de Dados com foco em aplicações reais de BI e Analytics  
-📫 [LinkedIn](https://www.linkedin.com) | [Substack](https://www.substack.com)
 
 ---
 
