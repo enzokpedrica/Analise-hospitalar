@@ -59,7 +59,7 @@ Esses arquivos foram tratados, relacionados e inseridos no SQL Server. Views oti
 
  ### Criação de Dashboard para Visualização com PowerBI
 - O Dashboard foi divido em 3 páginas onde abordamos: Visão Geral, Financeiro e Atendimentos
-
+![Dashboard Geral](Imagens/dash_hospital.pdf)
 
 ## 💼 Perguntas de Negócio Respondidas
 
