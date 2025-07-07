@@ -28,8 +28,26 @@ Esses arquivos foram tratados, relacionados e inseridos no SQL Server. Views oti
 ## 🌱 Passo a Passo do Projeto
 
 - Após o dowload dos nossos datasets, precisamos entender nossas estruturas de dados, onde vamos criar relacionamentos, realizar Joins e seguir para a análise
-### Visão Geral
+
+### Modelagem de Dados
+- Esse passo da modelagem é primordial para você entender os meus dados e criar suas tabelas de relacionamento. Site utilizado: **dbdigram.io**
 ![Dashboard Geral](Imagens/modelagem_banco.PNG)
+
+### Processo de ETL
+- Após eu ter o mapeamento dos meus dados chegou a hora de executar o processo de ETL
+- Eu optei por usar a **Arquitetura Medallion**
+- O ponto inicial foi deixar os datasets na camada BRONZE
+- Logo em seguida foi executado uma pipeline de dados onde aplicava o processo de **TRANSFORMAÇÃO** dos dados
+  - O arquivo da transformação .ipynb se encontra no repositório, mas em resumo foram alterados: Tipo de dados, criação de novas colunas com extração de valores
+  - Após a transformação os datasets já foram salvos na camada PRATA
+- Com os dados na camada PRATA, chegou o momento de fazer o **LOAD** para nosso banco de dados
+
+### Load para o Banco de Dados (SQL Server)
+- No SQL Server foi executado Queries para a criação do database que ficariam armazenados as tabelas
+- Com os nossos dados mapeados e modelados foi executado Queries para a criação das tabelas
+![Dashboard Geral](Imagens/Querydecriacaotabelas.PNG)
+
+ 
 
 ## 💼 Perguntas de Negócio Respondidas
 
