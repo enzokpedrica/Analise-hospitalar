@@ -45,9 +45,21 @@ Esses arquivos foram tratados, relacionados e inseridos no SQL Server. Views oti
 ### Load para o Banco de Dados (SQL Server)
 - No SQL Server foi executado Queries para a criação do database que ficariam armazenados as tabelas
 - Com os nossos dados mapeados e modelados foi executado Queries para a criação das tabelas
+- Após a criação das tabelas precisamos realizar a conexão Python -> SQL Server
+  - Com conexão bem sucessida foi hora de executar nossa função e realizar o LOAD para nosso banco de dados
 ![Dashboard Geral](Imagens/Querydecriacaotabelas.PNG)
 
- 
+### Dados no SQL Server
+- Com os dados inseridos no nosso banco de dados, chegou a hora de criarmos views para facilitar nossa análise no PowerBI
+- Views criadas, agora partiu PowerBI
+
+### Conexão PowerBI
+- Realizado a conexão entre PowerBI -> SQL Server
+- Carregamento das views, o carregamento foi direto porque os dados já se encontravam "LIMPOS e FORMATADOS"
+
+ ### Criação de Dashboard para Visualização com PowerBI
+- O Dashboard foi divido em 3 páginas onde abordamos: Visão Geral, Financeiro e Atendimentos
+
 
 ## 💼 Perguntas de Negócio Respondidas
 
